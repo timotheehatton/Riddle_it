@@ -14,8 +14,10 @@
 		3B1D7ABD20B308130007CA63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1D7ABB20B308130007CA63 /* LaunchScreen.storyboard */; };
 		3B1D7AC720B324AB0007CA63 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D7AC620B324AB0007CA63 /* GradientView.swift */; };
 		3B1D7AC920B32AF90007CA63 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D7AC820B32AF90007CA63 /* CustomButton.swift */; };
-		3B1D7ACF20B3358A0007CA63 /* MarselisOffcPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1D7ACC20B335700007CA63 /* MarselisOffcPro-Bold.ttf */; };
-		3B1D7AD020B3358D0007CA63 /* MarselisOffcPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1D7ACD20B335700007CA63 /* MarselisOffcPro-Light.ttf */; };
+		3B306EA920BD78A000B5F1C3 /* GrandHotel-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B306EA620BD78A000B5F1C3 /* GrandHotel-Regular.otf */; };
+		3B306EAA20BD78A000B5F1C3 /* MarselisOffcPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B306EA720BD78A000B5F1C3 /* MarselisOffcPro-Bold.ttf */; };
+		3B306EAB20BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B306EA820BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf */; };
+		3B6E282620B6FCC30032E9E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E282520B6FCC30032E9E7 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		3B1D7ABE20B308130007CA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1D7AC620B324AB0007CA63 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3B1D7AC820B32AF90007CA63 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		3B1D7ACC20B335700007CA63 /* MarselisOffcPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MarselisOffcPro-Bold.ttf"; path = "../../../../../Downloads/drive-download-20180516T193148Z-001/MarselisOffcPro-Bold.ttf"; sourceTree = "<group>"; };
-		3B1D7ACD20B335700007CA63 /* MarselisOffcPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MarselisOffcPro-Light.ttf"; path = "../../../../../Downloads/drive-download-20180516T193148Z-001/MarselisOffcPro-Light.ttf"; sourceTree = "<group>"; };
+		3B306EA620BD78A000B5F1C3 /* GrandHotel-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GrandHotel-Regular.otf"; sourceTree = "<group>"; };
+		3B306EA720BD78A000B5F1C3 /* MarselisOffcPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarselisOffcPro-Bold.ttf"; sourceTree = "<group>"; };
+		3B306EA820BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarselisOffcPro-Light.ttf"; sourceTree = "<group>"; };
+		3B6E282520B6FCC30032E9E7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				3B1D7ABE20B308130007CA63 /* Info.plist */,
 				3B1D7AC620B324AB0007CA63 /* GradientView.swift */,
 				3B1D7AC820B32AF90007CA63 /* CustomButton.swift */,
+				3B6E282520B6FCC30032E9E7 /* GameViewController.swift */,
 			);
 			path = ImgGame;
 			sourceTree = "<group>";
@@ -78,8 +83,9 @@
 		3B1D7ACA20B334DF0007CA63 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3B1D7ACC20B335700007CA63 /* MarselisOffcPro-Bold.ttf */,
-				3B1D7ACD20B335700007CA63 /* MarselisOffcPro-Light.ttf */,
+				3B306EA620BD78A000B5F1C3 /* GrandHotel-Regular.otf */,
+				3B306EA720BD78A000B5F1C3 /* MarselisOffcPro-Bold.ttf */,
+				3B306EA820BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -142,11 +148,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1D7ACF20B3358A0007CA63 /* MarselisOffcPro-Bold.ttf in Resources */,
+				3B306EA920BD78A000B5F1C3 /* GrandHotel-Regular.otf in Resources */,
+				3B306EAA20BD78A000B5F1C3 /* MarselisOffcPro-Bold.ttf in Resources */,
 				3B1D7ABD20B308130007CA63 /* LaunchScreen.storyboard in Resources */,
 				3B1D7ABA20B308130007CA63 /* Assets.xcassets in Resources */,
 				3B1D7AB820B308100007CA63 /* Main.storyboard in Resources */,
-				3B1D7AD020B3358D0007CA63 /* MarselisOffcPro-Light.ttf in Resources */,
+				3B306EAB20BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +167,7 @@
 				3B1D7AC920B32AF90007CA63 /* CustomButton.swift in Sources */,
 				3B1D7AB520B308100007CA63 /* ViewController.swift in Sources */,
 				3B1D7AB320B308100007CA63 /* AppDelegate.swift in Sources */,
+				3B6E282620B6FCC30032E9E7 /* GameViewController.swift in Sources */,
 				3B1D7AC720B324AB0007CA63 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

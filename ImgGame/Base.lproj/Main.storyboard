@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER OF TRIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8d-XE-Rde">
-                                <rect key="frame" x="135.5" y="470" width="105.5" height="16.5"/>
+                                <rect key="frame" x="135" y="470" width="105.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DB5-qk-ehf">
-                                <rect key="frame" x="142.5" y="104" width="91" height="25"/>
+                                <rect key="frame" x="142" y="104" width="91" height="25"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -99,22 +99,22 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-zd-j4C">
-                                <rect key="frame" x="169.5" y="494" width="37" height="25"/>
+                                <rect key="frame" x="169" y="494" width="37" height="25"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYT-jZ-VAT">
-                                <rect key="frame" x="100" y="417" width="175" height="32.5"/>
+                                <rect key="frame" x="100.5" y="417" width="175.5" height="32.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-dB-sia">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="32.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-dB-sia">
+                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="32.5"/>
                                         <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-1v-v7W">
-                                        <rect key="frame" x="114" y="0.0" width="61" height="32.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-1v-v7W">
+                                        <rect key="frame" x="120.5" y="0.0" width="55" height="32.5"/>
                                         <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -160,27 +160,25 @@
             </objects>
             <point key="canvasLocation" x="100" y="31.03448275862069"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="RQi-bg-7Jr">
             <objects>
-                <viewController id="99s-eD-PEU" sceneMemberID="viewController">
+                <viewController id="99s-eD-PEU" customClass="GameViewController" customModule="ImgGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Va-Dl-Roh" customClass="GradientView" customModule="ImgGame" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddY-8e-tch">
-                                <rect key="frame" x="16" y="30" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Retour">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddY-8e-tch">
+                                <rect key="frame" x="16" y="35" width="17" height="22"/>
+                                <state key="normal" image="return-arrow">
                                     <color key="titleColor" red="0.80000000000000004" green="0.5725490196078431" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="gbc-Qd-M6b"/>
+                                    <segue destination="AV3-2c-m9j" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="pJH-gU-YW5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NUMBER OF TRIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-mC-3dk">
-                                <rect key="frame" x="134" y="448" width="106" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER OF TRIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-mC-3dk">
+                                <rect key="frame" x="135.5" y="417" width="105.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -188,34 +186,349 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-fi-EUT">
                                 <rect key="frame" x="337" y="35" width="22" height="22"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-LI-tWw">
-                                <rect key="frame" x="169" y="473" width="37" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ly-IQ-uJM">
-                                <rect key="frame" x="156" y="127" width="63" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5X-99-Ckz">
+                                <rect key="frame" x="156.5" y="104" width="62.5" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ly-IQ-uJM">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
+                                        <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSV-if-Qq3">
+                                        <rect key="frame" x="50" y="0.0" width="12.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-YY-uv5">
-                                <rect key="frame" x="152.5" y="35" width="70" height="24"/>
+                                <rect key="frame" x="153" y="35" width="70" height="24"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_00" translatesAutoresizingMaskIntoConstraints="NO" id="qTS-sU-Dpz">
-                                <rect key="frame" x="91" y="181" width="193" height="193"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_00" translatesAutoresizingMaskIntoConstraints="NO" id="qTS-sU-Dpz">
+                                <rect key="frame" x="91" y="174" width="193" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="HE0-5E-Y08"/>
+                                    <constraint firstAttribute="height" constant="193" id="V4Q-tb-JAc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="d2p-TW-C9L">
+                                <rect key="frame" x="57" y="264" width="9" height="13"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="OKb-4h-8Je">
+                                <rect key="frame" x="309" y="264" width="9" height="13"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-LI-tWw">
+                                <rect key="frame" x="181.5" y="440.5" width="12.5" height="25"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXh-Qr-aHC" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="55" y="552" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton01:" destination="99s-eD-PEU" eventType="touchUpInside" id="OQB-ak-jf4"/>
+                                    <action selector="nkl:" destination="AV3-2c-m9j" eventType="touchUpInside" id="O2A-Ny-1Fm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09B-LJ-eUa" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="100" y="552" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton03:" destination="99s-eD-PEU" eventType="touchUpInside" id="C5v-qs-ghU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j19-sH-uQO" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="145" y="552" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton05:" destination="99s-eD-PEU" eventType="touchUpInside" id="p7k-i8-5bv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-WN-N9N" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="190" y="552" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton07:" destination="99s-eD-PEU" eventType="touchUpInside" id="sNb-Ad-Dk2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tng-XR-53o" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="235" y="552" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton09:" destination="99s-eD-PEU" eventType="touchUpInside" id="FL5-4J-qN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2C-5w-orf" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="280" y="552" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton11:" destination="99s-eD-PEU" eventType="touchUpInside" id="Bca-Vi-keU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-bt-hvf" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="55" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton02:" destination="99s-eD-PEU" eventType="touchUpInside" id="1fe-8e-T4j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJA-Vw-HDV" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="100" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton04:" destination="99s-eD-PEU" eventType="touchUpInside" id="BOY-hJ-ueZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-DK-1z9" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="145" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton06:" destination="99s-eD-PEU" eventType="touchUpInside" id="34O-5M-cja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-J2-Lbv" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="190" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton08:" destination="99s-eD-PEU" eventType="touchUpInside" id="QOo-PZ-OOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-oM-Z72" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="235" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton10:" destination="99s-eD-PEU" eventType="touchUpInside" id="3Z4-oD-hxb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-az-FgP" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="280" y="597" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letterButton12:" destination="99s-eD-PEU" eventType="touchUpInside" id="Opy-nu-RdU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvp-wZ-ywm">
+                                <rect key="frame" x="185" y="505.5" width="5" height="25"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y51-Z4-max">
+                                <rect key="frame" x="186" y="384" width="4.5" height="24"/>
+                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cdx-fi-EUT" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="1Vj-OI-qHs"/>
+                            <constraint firstItem="Y51-Z4-max" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="1yw-M1-6UB"/>
+                            <constraint firstItem="Gvp-wZ-ywm" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="45V-Nj-dna"/>
+                            <constraint firstItem="4q2-mC-3dk" firstAttribute="top" secondItem="qTS-sU-Dpz" secondAttribute="bottom" constant="50" id="8go-zl-QE6"/>
+                            <constraint firstItem="qTS-sU-Dpz" firstAttribute="leading" secondItem="d2p-TW-C9L" secondAttribute="trailing" constant="25" id="Apl-bH-NJJ"/>
+                            <constraint firstItem="OKb-4h-8Je" firstAttribute="bottom" secondItem="d2p-TW-C9L" secondAttribute="bottom" id="B3H-jz-pCt"/>
                             <constraint firstItem="0uH-YY-uv5" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="Dya-y1-jxd"/>
+                            <constraint firstItem="Gvp-wZ-ywm" firstAttribute="top" secondItem="bfa-LI-tWw" secondAttribute="bottom" constant="40" id="F8n-kv-F9k"/>
+                            <constraint firstItem="OKb-4h-8Je" firstAttribute="leading" secondItem="qTS-sU-Dpz" secondAttribute="trailing" constant="25" id="LJ1-sS-qH5"/>
+                            <constraint firstItem="OKb-4h-8Je" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="244" id="MUy-av-0KA"/>
+                            <constraint firstItem="y5X-99-Ckz" firstAttribute="top" secondItem="0uH-YY-uv5" secondAttribute="bottom" constant="45" id="R8t-bd-CW9"/>
+                            <constraint firstItem="4Qm-Nn-ugb" firstAttribute="bottom" secondItem="OKb-4h-8Je" secondAttribute="bottom" constant="390" id="WAu-Mt-fkb"/>
+                            <constraint firstItem="ddY-8e-tch" firstAttribute="leading" secondItem="4Qm-Nn-ugb" secondAttribute="leading" constant="16" id="Y2H-SN-cGu"/>
                             <constraint firstItem="0uH-YY-uv5" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="aZG-hU-Tsf"/>
+                            <constraint firstItem="bfa-LI-tWw" firstAttribute="top" secondItem="4q2-mC-3dk" secondAttribute="bottom" constant="7" id="b8V-YK-u7a"/>
+                            <constraint firstItem="ddY-8e-tch" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="f4a-MF-bOy"/>
+                            <constraint firstItem="Y51-Z4-max" firstAttribute="top" secondItem="qTS-sU-Dpz" secondAttribute="bottom" constant="17" id="izs-EK-onK"/>
+                            <constraint firstItem="y5X-99-Ckz" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="m58-R9-Tp1"/>
+                            <constraint firstItem="qTS-sU-Dpz" firstAttribute="top" secondItem="y5X-99-Ckz" secondAttribute="bottom" constant="45" id="qel-uJ-EeI"/>
+                            <constraint firstItem="4q2-mC-3dk" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="roN-g2-unc"/>
+                            <constraint firstItem="OKb-4h-8Je" firstAttribute="top" secondItem="d2p-TW-C9L" secondAttribute="top" id="tMo-Dk-As9"/>
+                            <constraint firstItem="qTS-sU-Dpz" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="wXJ-U4-t85"/>
                             <constraint firstItem="4Qm-Nn-ugb" firstAttribute="trailing" secondItem="Cdx-fi-EUT" secondAttribute="trailing" constant="16" id="wcU-p1-jut"/>
+                            <constraint firstItem="bfa-LI-tWw" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="x3W-6w-QXq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Qm-Nn-ugb"/>
                         <userDefinedRuntimeAttributes>
@@ -227,16 +540,39 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="qTS-sU-Dpz" id="wwF-pf-Maz"/>
+                        <outlet property="inputLabel" destination="Gvp-wZ-ywm" id="Qh2-OF-a7n"/>
+                        <outlet property="letterButtonLabel01" destination="TXh-Qr-aHC" id="mzJ-DZ-8as"/>
+                        <outlet property="letterButtonLabel02" destination="Xhr-bt-hvf" id="5Ob-OV-FSD"/>
+                        <outlet property="letterButtonLabel03" destination="09B-LJ-eUa" id="q41-Bt-8pU"/>
+                        <outlet property="letterButtonLabel04" destination="NJA-Vw-HDV" id="XWz-8l-PG2"/>
+                        <outlet property="letterButtonLabel05" destination="j19-sH-uQO" id="pqb-l9-7Iu"/>
+                        <outlet property="letterButtonLabel06" destination="zmw-DK-1z9" id="aVs-63-Msv"/>
+                        <outlet property="letterButtonLabel07" destination="YOk-WN-N9N" id="FEn-ew-LEk"/>
+                        <outlet property="letterButtonLabel08" destination="tcy-J2-Lbv" id="Gkm-tA-BYa"/>
+                        <outlet property="letterButtonLabel09" destination="tng-XR-53o" id="vT0-xX-O0m"/>
+                        <outlet property="letterButtonLabel10" destination="sg3-oM-Z72" id="Pad-Kb-zfM"/>
+                        <outlet property="letterButtonLabel11" destination="N2C-5w-orf" id="VLt-5c-sp7"/>
+                        <outlet property="letterButtonLabel12" destination="fKs-az-FgP" id="Sjs-0S-BA3"/>
+                        <outlet property="levelLabel" destination="HSV-if-Qq3" id="Gg9-1X-BrG"/>
+                        <outlet property="numberOfTriesLabel" destination="bfa-LI-tWw" id="bNp-CT-8do"/>
+                        <outlet property="resultLabel" destination="Y51-Z4-max" id="ru8-7f-0x9"/>
+                    </connections>
                 </viewController>
+                <exit id="AV3-2c-m9j" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3f-Sf-5rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="879.20000000000005" y="33.733133433283363"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-left" width="9" height="15"/>
+        <image name="arrow-right" width="9" height="15"/>
         <image name="img_00" width="193" height="193"/>
         <image name="info" width="22" height="22"/>
         <image name="logo" width="70" height="24"/>
+        <image name="return-arrow" width="17" height="15"/>
         <image name="sound" width="20" height="20"/>
     </resources>
 </document>

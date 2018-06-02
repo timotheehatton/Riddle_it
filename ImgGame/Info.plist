@@ -24,6 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>GrandHotel-Regular.otf</string>
 		<string>MarselisOffcPro-Bold.ttf</string>
 		<string>MarselisOffcPro-Light.ttf</string>
 	</array>
