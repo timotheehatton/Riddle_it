@@ -40,15 +40,13 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_00" translatesAutoresizingMaskIntoConstraints="NO" id="bNA-2H-DnB">
                                 <rect key="frame" x="91" y="174" width="193" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="VN1-cH-X2x"/>
+                                    <constraint firstAttribute="height" constant="193" id="sUP-3f-wm4"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="S7o-zx-aTf">
                                 <rect key="frame" x="152.5" y="35" width="70" height="24"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound" translatesAutoresizingMaskIntoConstraints="NO" id="9pS-bR-zXY">
-                                <rect key="frame" x="16" y="35" width="20" height="20"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="wjm-0U-OPC">
-                                <rect key="frame" x="337" y="35" width="22" height="22"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-pF-iF8" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
                                 <rect key="frame" x="124" y="564" width="127" height="40"/>
@@ -73,7 +71,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="99s-eD-PEU" kind="show" id="UdD-5d-ost"/>
+                                    <segue destination="99s-eD-PEU" kind="custom" identifier="" customClass="FadeSegue" customModule="ImgGame" customModuleProvider="target" id="UdD-5d-ost"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZj-qr-JI4" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
@@ -83,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="40" id="d5G-5b-Wtu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
-                                <state key="normal" title="1">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -97,9 +95,12 @@
                                         <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="99s-eD-PEU" kind="custom" customClass="FadeSegue" customModule="ImgGame" customModuleProvider="target" id="nfR-B7-Gpz"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-zd-j4C">
-                                <rect key="frame" x="169" y="494" width="37" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-zd-j4C">
+                                <rect key="frame" x="175.5" y="494" width="24.5" height="25"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -121,6 +122,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9g-Ui-LKb">
+                                <rect key="frame" x="337" y="35" width="22" height="22"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <segue destination="3W7-jZ-NrW" kind="presentation" customClass="FadeSegue" customModule="ImgGame" customModuleProvider="target" id="cy9-K8-5dT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-gj-haa">
+                                <rect key="frame" x="16" y="35" width="20" height="22"/>
+                                <state key="normal" image="sound"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12403905014418766" green="0.089053487703922241" blue="0.17191465736040612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -131,18 +143,18 @@
                             <constraint firstItem="c8d-XE-Rde" firstAttribute="top" secondItem="FYT-jZ-VAT" secondAttribute="bottom" constant="20" id="92I-Vy-NfZ"/>
                             <constraint firstItem="DB5-qk-ehf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9oF-5R-TlS"/>
                             <constraint firstItem="DB5-qk-ehf" firstAttribute="top" secondItem="S7o-zx-aTf" secondAttribute="bottom" constant="45" id="C1L-fv-bFx"/>
-                            <constraint firstItem="wjm-0U-OPC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="HcQ-QW-r8A"/>
-                            <constraint firstItem="9pS-bR-zXY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="MOj-pe-U1p"/>
                             <constraint firstItem="bNA-2H-DnB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U0s-ij-vDr"/>
                             <constraint firstItem="FYT-jZ-VAT" firstAttribute="top" secondItem="bNA-2H-DnB" secondAttribute="bottom" constant="50" id="Ujf-4X-4RP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wjm-0U-OPC" secondAttribute="trailing" constant="16" id="Wzp-vn-1lx"/>
                             <constraint firstItem="c8d-XE-Rde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSm-fE-dwo"/>
                             <constraint firstItem="aM9-zd-j4C" firstAttribute="top" secondItem="c8d-XE-Rde" secondAttribute="bottom" constant="7" id="ZBS-vC-1S1"/>
-                            <constraint firstItem="9pS-bR-zXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dtM-Oa-hDD"/>
                             <constraint firstItem="S7o-zx-aTf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e18-QE-DI7"/>
+                            <constraint firstItem="SuG-gj-haa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="iBs-A6-pbz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R9g-Ui-LKb" secondAttribute="trailing" constant="16" id="iOX-gi-l3d"/>
                             <constraint firstItem="FYT-jZ-VAT" firstAttribute="top" secondItem="HZj-qr-JI4" secondAttribute="bottom" constant="30" id="ifJ-Ma-VkS"/>
                             <constraint firstItem="HZj-qr-JI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mqx-Rc-nzV"/>
                             <constraint firstItem="FYT-jZ-VAT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oXR-KL-AxH"/>
+                            <constraint firstItem="R9g-Ui-LKb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="pZ3-ui-4HR"/>
+                            <constraint firstItem="SuG-gj-haa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s2F-yl-qD1"/>
                             <constraint firstItem="VjP-pF-iF8" firstAttribute="top" secondItem="aM9-zd-j4C" secondAttribute="bottom" constant="45" id="wfp-Xs-Vp4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -155,6 +167,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="bNA-2H-DnB" id="bf7-y3-6OC"/>
+                        <outlet property="levelLabel" destination="HZj-qr-JI4" id="KFl-ee-0g8"/>
+                        <outlet property="numberOfTriesLabel" destination="aM9-zd-j4C" id="aYH-Iz-3eT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +191,7 @@
                                     <color key="titleColor" red="0.80000000000000004" green="0.5725490196078431" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AV3-2c-m9j" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="pJH-gU-YW5"/>
+                                    <segue destination="AV3-2c-m9j" kind="unwind" customClass="UnwindScaleSegue" customModule="ImgGame" customModuleProvider="target" unwindAction="prepareForUnwindWithSender:" id="r10-6U-Fun"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER OF TRIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-mC-3dk">
@@ -183,9 +200,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-fi-EUT">
-                                <rect key="frame" x="337" y="35" width="22" height="22"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5X-99-Ckz">
                                 <rect key="frame" x="156.5" y="104" width="62.5" height="25"/>
                                 <subviews>
@@ -195,7 +209,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSV-if-Qq3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSV-if-Qq3">
                                         <rect key="frame" x="50" y="0.0" width="12.5" height="25"/>
                                         <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,14 +227,8 @@
                                     <constraint firstAttribute="height" constant="193" id="V4Q-tb-JAc"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="d2p-TW-C9L">
-                                <rect key="frame" x="57" y="264" width="9" height="13"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="OKb-4h-8Je">
-                                <rect key="frame" x="309" y="264" width="9" height="13"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-LI-tWw">
-                                <rect key="frame" x="181.5" y="440.5" width="12.5" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-LI-tWw">
+                                <rect key="frame" x="176" y="440.5" width="24.5" height="25"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -230,6 +238,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
                                 <state key="normal" title="A">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -490,8 +507,8 @@
                                     <action selector="letterButton12:" destination="99s-eD-PEU" eventType="touchUpInside" id="Opy-nu-RdU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvp-wZ-ywm">
-                                <rect key="frame" x="185" y="505.5" width="5" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X    X    X    X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvp-wZ-ywm">
+                                <rect key="frame" x="134.5" y="500.5" width="107" height="25"/>
                                 <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -502,21 +519,40 @@
                                 <color key="textColor" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjn-ey-JcK" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                <rect key="frame" x="134" y="527" width="20" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.58431372550000005" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw8-hr-982">
+                                <rect key="frame" x="337" y="35" width="22" height="22"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <segue destination="3W7-jZ-NrW" kind="presentation" customClass="FadeSegue" customModule="ImgGame" customModuleProvider="target" id="myG-pp-UxU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.59221679687500006" green="0.59221679687500006" blue="0.59221679687500006" alpha="0.40132521489971346" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Cdx-fi-EUT" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="1Vj-OI-qHs"/>
                             <constraint firstItem="Y51-Z4-max" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="1yw-M1-6UB"/>
                             <constraint firstItem="Gvp-wZ-ywm" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="45V-Nj-dna"/>
+                            <constraint firstItem="fw8-hr-982" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="53j-Sw-pqK"/>
                             <constraint firstItem="4q2-mC-3dk" firstAttribute="top" secondItem="qTS-sU-Dpz" secondAttribute="bottom" constant="50" id="8go-zl-QE6"/>
-                            <constraint firstItem="qTS-sU-Dpz" firstAttribute="leading" secondItem="d2p-TW-C9L" secondAttribute="trailing" constant="25" id="Apl-bH-NJJ"/>
-                            <constraint firstItem="OKb-4h-8Je" firstAttribute="bottom" secondItem="d2p-TW-C9L" secondAttribute="bottom" id="B3H-jz-pCt"/>
                             <constraint firstItem="0uH-YY-uv5" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="15" id="Dya-y1-jxd"/>
-                            <constraint firstItem="Gvp-wZ-ywm" firstAttribute="top" secondItem="bfa-LI-tWw" secondAttribute="bottom" constant="40" id="F8n-kv-F9k"/>
-                            <constraint firstItem="OKb-4h-8Je" firstAttribute="leading" secondItem="qTS-sU-Dpz" secondAttribute="trailing" constant="25" id="LJ1-sS-qH5"/>
-                            <constraint firstItem="OKb-4h-8Je" firstAttribute="top" secondItem="4Qm-Nn-ugb" secondAttribute="top" constant="244" id="MUy-av-0KA"/>
+                            <constraint firstItem="Gvp-wZ-ywm" firstAttribute="top" secondItem="bfa-LI-tWw" secondAttribute="bottom" constant="35" id="F8n-kv-F9k"/>
+                            <constraint firstItem="4Qm-Nn-ugb" firstAttribute="trailing" secondItem="fw8-hr-982" secondAttribute="trailing" constant="16" id="OWX-8o-6ur"/>
                             <constraint firstItem="y5X-99-Ckz" firstAttribute="top" secondItem="0uH-YY-uv5" secondAttribute="bottom" constant="45" id="R8t-bd-CW9"/>
-                            <constraint firstItem="4Qm-Nn-ugb" firstAttribute="bottom" secondItem="OKb-4h-8Je" secondAttribute="bottom" constant="390" id="WAu-Mt-fkb"/>
                             <constraint firstItem="ddY-8e-tch" firstAttribute="leading" secondItem="4Qm-Nn-ugb" secondAttribute="leading" constant="16" id="Y2H-SN-cGu"/>
                             <constraint firstItem="0uH-YY-uv5" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="aZG-hU-Tsf"/>
                             <constraint firstItem="bfa-LI-tWw" firstAttribute="top" secondItem="4q2-mC-3dk" secondAttribute="bottom" constant="7" id="b8V-YK-u7a"/>
@@ -525,9 +561,7 @@
                             <constraint firstItem="y5X-99-Ckz" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="m58-R9-Tp1"/>
                             <constraint firstItem="qTS-sU-Dpz" firstAttribute="top" secondItem="y5X-99-Ckz" secondAttribute="bottom" constant="45" id="qel-uJ-EeI"/>
                             <constraint firstItem="4q2-mC-3dk" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="roN-g2-unc"/>
-                            <constraint firstItem="OKb-4h-8Je" firstAttribute="top" secondItem="d2p-TW-C9L" secondAttribute="top" id="tMo-Dk-As9"/>
                             <constraint firstItem="qTS-sU-Dpz" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="wXJ-U4-t85"/>
-                            <constraint firstItem="4Qm-Nn-ugb" firstAttribute="trailing" secondItem="Cdx-fi-EUT" secondAttribute="trailing" constant="16" id="wcU-p1-jut"/>
                             <constraint firstItem="bfa-LI-tWw" firstAttribute="centerX" secondItem="2Va-Dl-Roh" secondAttribute="centerX" id="x3W-6w-QXq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Qm-Nn-ugb"/>
@@ -565,14 +599,186 @@
             </objects>
             <point key="canvasLocation" x="879.20000000000005" y="33.733133433283363"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Gx0-XY-MOC">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="3W7-jZ-NrW" customClass="PopUpViewController" customModule="ImgGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PFO-tY-tbi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rXk-AN-I49">
+                                <rect key="frame" x="25" y="170.5" width="325" height="325"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txL-QG-ms3" customClass="GradientView" customModule="ImgGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="325"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HN-4N-jGM">
+                                                <rect key="frame" x="30" y="28" width="15" height="22"/>
+                                                <state key="normal" image="close-icon"/>
+                                                <connections>
+                                                    <action selector="closeButton_Touch:" destination="3W7-jZ-NrW" eventType="touchUpInside" id="4HE-qa-kTM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmX-oz-9YM" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="100" width="28" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="28" id="0ry-mg-Ljc"/>
+                                                    <constraint firstAttribute="height" constant="28" id="mY8-5o-3U6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="16"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Look at the pictures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKH-6P-pI5">
+                                                <rect key="frame" x="98" y="104" width="138" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o88-QO-yKs" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="160" width="28" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="GQK-7Z-pYl"/>
+                                                    <constraint firstAttribute="width" constant="28" id="K6g-Gy-fwj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="16"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess what’s on the pics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vth-Tc-i6j">
+                                                <rect key="frame" x="98" y="164" width="173" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czT-cF-Qve" customClass="CustomButton" customModule="ImgGame" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="220" width="28" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="GxH-4F-et1"/>
+                                                    <constraint firstAttribute="width" constant="28" id="c2h-iF-yBg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Bold" family="Marselis Offc Pro" pointSize="16"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                                        <color key="value" red="0.9398528934" green="0.43468674029999999" blue="0.2308352333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                                        <color key="value" red="1" green="0.82352941180000006" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer with the letters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-eA-Xzh">
+                                                <rect key="frame" x="98" y="224" width="163" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-Sj-RK8">
+                                                <rect key="frame" x="111" y="25" width="103" height="25"/>
+                                                <fontDescription key="fontDescription" name="MarselisOffcPro-Light" family="Marselis Offc Pro" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="7HN-4N-jGM" firstAttribute="top" secondItem="txL-QG-ms3" secondAttribute="top" constant="28" id="2hU-d6-KxG"/>
+                                            <constraint firstAttribute="height" constant="325" id="KxE-T7-N0p"/>
+                                            <constraint firstItem="7HN-4N-jGM" firstAttribute="leading" secondItem="txL-QG-ms3" secondAttribute="leading" constant="30" id="Njf-Or-pM3"/>
+                                            <constraint firstItem="czT-cF-Qve" firstAttribute="leading" secondItem="txL-QG-ms3" secondAttribute="leading" constant="55" id="Ucb-HQ-a8M"/>
+                                            <constraint firstAttribute="width" constant="325" id="X2U-0T-bzx"/>
+                                            <constraint firstItem="dmX-oz-9YM" firstAttribute="top" secondItem="txL-QG-ms3" secondAttribute="top" constant="100" id="YeG-CY-v2f"/>
+                                            <constraint firstItem="o88-QO-yKs" firstAttribute="leading" secondItem="txL-QG-ms3" secondAttribute="leading" constant="55" id="Zoh-S3-Mwh"/>
+                                            <constraint firstItem="dmX-oz-9YM" firstAttribute="leading" secondItem="txL-QG-ms3" secondAttribute="leading" constant="55" id="bKN-xV-8FQ"/>
+                                            <constraint firstItem="o88-QO-yKs" firstAttribute="top" secondItem="dmX-oz-9YM" secondAttribute="bottom" constant="32" id="de4-wa-nxd"/>
+                                            <constraint firstItem="9n7-Sj-RK8" firstAttribute="centerX" secondItem="txL-QG-ms3" secondAttribute="centerX" id="fgE-tn-1KM"/>
+                                            <constraint firstItem="9n7-Sj-RK8" firstAttribute="top" secondItem="txL-QG-ms3" secondAttribute="top" constant="26" id="t4z-wT-Zdc"/>
+                                            <constraint firstItem="czT-cF-Qve" firstAttribute="top" secondItem="o88-QO-yKs" secondAttribute="bottom" constant="32" id="web-dz-sjc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                                <color key="value" red="0.27058823529999998" green="0.2470588235" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                                <color key="value" red="0.1176470588" green="0.098039215690000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="UVo-bh-mhb"/>
+                                    <constraint firstAttribute="width" constant="325" id="sQI-tS-SCP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="rXk-AN-I49" firstAttribute="centerX" secondItem="PFO-tY-tbi" secondAttribute="centerX" id="01O-Xm-Kfp"/>
+                            <constraint firstItem="rXk-AN-I49" firstAttribute="centerY" secondItem="PFO-tY-tbi" secondAttribute="centerY" id="3wg-Nv-wHL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b31-Bo-NCg"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cS5-oy-MoD" appends="YES" id="Mhj-U2-MZW"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="boxView" destination="txL-QG-ms3" id="TFh-Wl-ZK6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBz-1F-2eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cS5-oy-MoD">
+                    <connections>
+                        <action selector="backgroundTouchClose:" destination="3W7-jZ-NrW" id="zRA-OB-lyV"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="495" y="813"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="arrow-left" width="9" height="15"/>
-        <image name="arrow-right" width="9" height="15"/>
+        <image name="close-icon" width="15" height="15"/>
         <image name="img_00" width="193" height="193"/>
         <image name="info" width="22" height="22"/>
         <image name="logo" width="70" height="24"/>
         <image name="return-arrow" width="17" height="15"/>
         <image name="sound" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="myG-pp-UxU"/>
+        <segue reference="UdD-5d-ost"/>
+    </inferredMetricsTieBreakers>
 </document>

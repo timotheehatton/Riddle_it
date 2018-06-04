@@ -10,17 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController
 {
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        generatekeyboard()
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
+    let manager = FileManager.default
     
     var level: Int = 1
     var enterLetter: [String] = []
@@ -48,62 +38,51 @@ class GameViewController: UIViewController
     @IBOutlet weak var letterButtonLabel11: CustomButton!
     @IBOutlet weak var letterButtonLabel12: CustomButton!
     
-    @IBAction func letterButton01(_ sender: Any)
+    override func viewDidLoad()
     {
-        enterLetterToInput(letter: letterButtonLabel01.titleLabel!.text!)
+        super.viewDidLoad()
+        launchGame()
+    }
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
     }
     
-    @IBAction func letterButton02(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel02.titleLabel!.text!)
+    //function on game launch
+    func launchGame() {
+        guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
+        let documentUrl = url.appendingPathComponent("game-data.json")
+        
+        let dataRead = try? Data(contentsOf: documentUrl)
+        let decodedArray = try? JSONDecoder().decode([String].self, from: dataRead!)
+        
+        if (decodedArray?.indices.contains(0))! {
+            level = Int(decodedArray![0])!
+        } else {
+            level = 1
+        }
+        levelLabel.text = String(level)
+        
+        if (decodedArray?.indices.contains(1))! {
+            numberOfTries = Int(decodedArray![1])!
+        } else {
+            numberOfTries = 0
+        }
+        numberOfTriesLabel.text = String(numberOfTries)
+        
+        self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
+        inputLabel.text = ""
+        
+        generatekeyboard()
     }
-    @IBAction func letterButton03(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel03.titleLabel!.text!)
-    }
-    @IBAction func letterButton04(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel04.titleLabel!.text!)
-    }
-    @IBAction func letterButton05(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel05.titleLabel!.text!)
-    }
-    @IBAction func letterButton06(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel06.titleLabel!.text!)
-    }
-    @IBAction func letterButton07(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel07.titleLabel!.text!)
-    }
-    @IBAction func letterButton08(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel08.titleLabel!.text!)
-    }
-    @IBAction func letterButton09(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel09.titleLabel!.text!)
-    }
-    @IBAction func letterButton10(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel10.titleLabel!.text!)
-    }
-    @IBAction func letterButton11(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel11.titleLabel!.text!)
-    }
-    @IBAction func letterButton12(_ sender: Any)
-    {
-        enterLetterToInput(letter: letterButtonLabel12.titleLabel!.text!)
-    }
-    
     
     //fonction win level
     func win()
     {
-        resultLabel.text = "win, the image is \(wordsToCompare[level - 1])"
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        resultLabel.text = "win :), the image is \(wordsToCompare[level - 1])"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1)
+        {
             self.inputLabel.text = ""
             self.numberOfTries += 1
             self.numberOfTriesLabel.text = String(self.numberOfTries)
@@ -112,21 +91,61 @@ class GameViewController: UIViewController
             self.enterLetter.removeAll()
             self.generatekeyboard()
             self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
+            self.letterButtonLabel01.alpha = 1.0
+            self.letterButtonLabel02.alpha = 1.0
+            self.letterButtonLabel03.alpha = 1.0
+            self.letterButtonLabel04.alpha = 1.0
+            self.letterButtonLabel05.alpha = 1.0
+            self.letterButtonLabel06.alpha = 1.0
+            self.letterButtonLabel07.alpha = 1.0
+            self.letterButtonLabel08.alpha = 1.0
+            self.letterButtonLabel09.alpha = 1.0
+            self.letterButtonLabel10.alpha = 1.0
+            self.letterButtonLabel11.alpha = 1.0
+            self.letterButtonLabel12.alpha = 1.0
             self.resultLabel.text = ""
+            
+            guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
+            let documentUrl = url.appendingPathComponent("game-data.json")
+            let gameInfo = ["\(self.level)", "\(self.numberOfTries)"]
+            guard let gameData = try? JSONEncoder().encode(gameInfo) else { fatalError() }
+            try? gameData.write(to: documentUrl)
         }
     }
     
     //fonction loose level
     func loose()
     {
-        resultLabel.text = "lose"
-        inputLabel.text = ""
-        numberOfTries += 1
-        numberOfTriesLabel.text = String(numberOfTries)
-        enterLetter.removeAll()
+        resultLabel.text = "loose :/"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1)
+        {
+            self.inputLabel.text = ""
+            self.numberOfTries += 1
+            self.numberOfTriesLabel.text = String(self.numberOfTries)
+            self.enterLetter.removeAll()
+            self.letterButtonLabel01.alpha = 1.0
+            self.letterButtonLabel02.alpha = 1.0
+            self.letterButtonLabel03.alpha = 1.0
+            self.letterButtonLabel04.alpha = 1.0
+            self.letterButtonLabel05.alpha = 1.0
+            self.letterButtonLabel06.alpha = 1.0
+            self.letterButtonLabel07.alpha = 1.0
+            self.letterButtonLabel08.alpha = 1.0
+            self.letterButtonLabel09.alpha = 1.0
+            self.letterButtonLabel10.alpha = 1.0
+            self.letterButtonLabel11.alpha = 1.0
+            self.letterButtonLabel12.alpha = 1.0
+            self.resultLabel.text = ""
+            
+            guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
+            let documentUrl = url.appendingPathComponent("game-data.json")
+            let gameInfo = ["\(self.level)", "\(self.numberOfTries)"]
+            guard let gameData = try? JSONEncoder().encode(gameInfo) else { fatalError() }
+            try? gameData.write(to: documentUrl)
+        }
     }
     
-    //fonction chech result trie
+    //fonction check result trie
     func checkresult()
     {
         if enterLetter.joined() == wordsToCompare[level-1]
@@ -147,7 +166,7 @@ class GameViewController: UIViewController
             inputLabel.text = inputLabel.text! + letter + "   "
             enterLetter.append(letter)
         }
-        else
+        else if enterLetter.count == wordsToCompare[level - 1].count - 1
         {
             inputLabel.text = inputLabel.text! + letter + "   "
             enterLetter.append(letter)
@@ -178,6 +197,80 @@ class GameViewController: UIViewController
         letterButtonLabel10.setTitle( String(keyboardLetter[9]), for: .normal )
         letterButtonLabel11.setTitle( String(keyboardLetter[10]), for: .normal )
         letterButtonLabel12.setTitle( String(keyboardLetter[11]), for: .normal )
+    }
+    
+    @IBAction func letterButton01(_ sender: Any) {
+        if letterButtonLabel01.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1 {
+            enterLetterToInput(letter: letterButtonLabel01.titleLabel!.text!)
+            letterButtonLabel01.alpha = 0.3
+        }
+    }
+    
+    @IBAction func letterButton02(_ sender: Any) {
+        if (letterButtonLabel02.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel02.titleLabel!.text!)
+            letterButtonLabel02.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton03(_ sender: Any) {
+        if (letterButtonLabel03.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel03.titleLabel!.text!)
+            letterButtonLabel03.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton04(_ sender: Any) {
+        if (letterButtonLabel04.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel04.titleLabel!.text!)
+            letterButtonLabel04.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton05(_ sender: Any) {
+        if (letterButtonLabel05.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel05.titleLabel!.text!)
+            letterButtonLabel05.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton06(_ sender: Any) {
+        if (letterButtonLabel06.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel06.titleLabel!.text!)
+            letterButtonLabel06.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton07(_ sender: Any) {
+        if (letterButtonLabel07.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel07.titleLabel!.text!)
+            letterButtonLabel07.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton08(_ sender: Any) {
+        if (letterButtonLabel08.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel08.titleLabel!.text!)
+            letterButtonLabel08.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton09(_ sender: Any) {
+        if (letterButtonLabel09.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel09.titleLabel!.text!)
+            letterButtonLabel09.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton10(_ sender: Any) {
+        if (letterButtonLabel10.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel10.titleLabel!.text!)
+            letterButtonLabel10.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton11(_ sender: Any) {
+        if (letterButtonLabel11.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel11.titleLabel!.text!)
+            letterButtonLabel11.alpha = 0.3
+        }
+    }
+    @IBAction func letterButton12(_ sender: Any) {
+        if (letterButtonLabel12.alpha == 1.0 && enterLetter.count <= wordsToCompare[level - 1].count - 1) {
+            enterLetterToInput(letter: letterButtonLabel12.titleLabel!.text!)
+            letterButtonLabel12.alpha = 0.3
+        }
     }
 }
 
