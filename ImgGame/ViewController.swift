@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        initView()
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -42,12 +41,13 @@ class ViewController: UIViewController {
     func initView()
     {
         guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
+        print(url)
         let documentUrl = url.appendingPathComponent("game-data.json")
         
         let dataRead = try? Data(contentsOf: documentUrl)
         let decodedArray = try? JSONDecoder().decode([String].self, from: dataRead!)
         
-        if (decodedArray?.indices.contains(0))!
+        if decodedArray != nil
         {
             level = Int(decodedArray![0])!
         } else {
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         }
         levelLabel.setTitle( String(level), for: .normal )
         
-        if (decodedArray?.indices.contains(1))!
+        if decodedArray != nil
         {
             numberOfTries = Int(decodedArray![1])!
         } else {

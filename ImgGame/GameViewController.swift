@@ -24,6 +24,7 @@ class GameViewController: UIViewController
     @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var texteUnderlineContainer: UIStackView!
     
     @IBOutlet weak var letterButtonLabel01: CustomButton!
     @IBOutlet weak var letterButtonLabel02: CustomButton!
@@ -57,14 +58,16 @@ class GameViewController: UIViewController
         let dataRead = try? Data(contentsOf: documentUrl)
         let decodedArray = try? JSONDecoder().decode([String].self, from: dataRead!)
         
-        if (decodedArray?.indices.contains(0))! {
+        if decodedArray != nil
+        {
             level = Int(decodedArray![0])!
         } else {
             level = 1
         }
         levelLabel.text = String(level)
         
-        if (decodedArray?.indices.contains(1))! {
+        if decodedArray != nil
+        {
             numberOfTries = Int(decodedArray![1])!
         } else {
             numberOfTries = 0
@@ -75,6 +78,7 @@ class GameViewController: UIViewController
         inputLabel.text = ""
         
         generatekeyboard()
+        generateTexteUnderline()
     }
     
     //fonction win level
@@ -90,6 +94,7 @@ class GameViewController: UIViewController
             self.levelLabel.text = String(self.level)
             self.enterLetter.removeAll()
             self.generatekeyboard()
+            self.generateTexteUnderline()
             self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
             self.letterButtonLabel01.alpha = 1.0
             self.letterButtonLabel02.alpha = 1.0
@@ -163,22 +168,39 @@ class GameViewController: UIViewController
     {
         if enterLetter.count < wordsToCompare[level - 1].count - 1
         {
-            inputLabel.text = inputLabel.text! + letter + "   "
+            inputLabel.text = inputLabel.text! + "  " + letter + "  "
             enterLetter.append(letter)
         }
         else if enterLetter.count == wordsToCompare[level - 1].count - 1
         {
-            inputLabel.text = inputLabel.text! + letter + "   "
+            inputLabel.text = inputLabel.text! + "  " + letter + "  "
             enterLetter.append(letter)
             checkresult()
         }
+    }
+    
+    //generate texte unbderline
+    func generateTexteUnderline()
+    {
+        let emptySpace = 10
+        var xAxis = 0
+        for _ in 1...wordsToCompare[level - 1].count
+        {
+            let button = UIView()
+            button.frame = CGRect(x: xAxis, y: 0, width: 20, height: 3)
+            button.layer.cornerRadius = 2
+            xAxis = xAxis + 20 + emptySpace
+            button.backgroundColor = UIColor.orange
+            texteUnderlineContainer.addSubview(button)
+        }
+
     }
     
     //fonction to generate the keyboard
     func generatekeyboard()
     {
         keyboardLetter = Array(wordsToCompare[level - 1])
-        for _ in 0..<13 - keyboardLetter.count
+        for _ in 0..<12 - keyboardLetter.count
         {
             let aleatValue = Int(arc4random() % 25)
             keyboardLetter.append(allLetters[aleatValue])
