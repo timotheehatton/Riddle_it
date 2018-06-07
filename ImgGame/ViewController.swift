@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var wordsToCompare: [String] = ["AMPOULE", "ASPIRATEUR", "BETONNIERE", "BEYONCE", "BIERE", "CHEVEUX", "CLAVIER", "DENTS", "ENCEINTE", "GUITARE", "HALTERES", "JEAN", "LUNETTES", "MELON", "MICRO", "MONTRE", "NUAGE", "PIANO", "PIECE", "POISSON", "POUBELLE", "ROSE", "SCOTCH", "SKATE", "TELECOMMANDE", "VELO", "VINYLE"]
     
     let manager = FileManager.default
     
@@ -63,7 +64,6 @@ class ViewController: UIViewController {
         }
         numberOfTriesLabel.text = String(numberOfTries)
         
-        self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
-        
+        image.image = UIImage(named: "\(wordsToCompare[level - 1].lowercased())-min.jpg")
     }
 }

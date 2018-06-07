@@ -14,14 +14,19 @@ class GameViewController: UIViewController
     
     var level: Int = 1
     var enterLetter: [String] = []
-    var numberOfTries: Int = 0;
-    var wordsToCompare: [String] = ["TEST", "BATEAU", "VOITURE", "VELO", "MOTO"]
+    var numberOfTries: Int = 0
+    var wordsToCompare: [String] = ["AMPOULE", "ASPIRATEUR", "BETONNIERE", "BEYONCE", "BIERE", "CHEVEUX", "CLAVIER", "DENTS", "ENCEINTE", "GUITARE", "HALTERES", "JEAN", "LUNETTES", "MELON", "MICRO", "MONTRE", "NUAGE", "PIANO", "PIECE", "POISSON", "POUBELLE", "ROSE", "SCOTCH", "SKATE", "TELECOMMANDE", "VELO", "VINYLE"]
     var allLetters: [Character] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var keyboardLetter: [Character] = []
+    var viewArray: [UIView] = []
+    var labelArray: [UILabel] = []
+    var keyboardPosition = 0
     
+    @IBOutlet weak var winPopUp: UIView!
+    @IBOutlet weak var texteContainer: UIStackView!
+    @IBOutlet weak var labelContainerContraint: NSLayoutConstraint!
     @IBOutlet weak var numberOfTriesLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var texteUnderlineContainer: UIStackView!
@@ -43,11 +48,6 @@ class GameViewController: UIViewController
     {
         super.viewDidLoad()
         launchGame()
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
     
     //function on game launch
@@ -73,9 +73,7 @@ class GameViewController: UIViewController
             numberOfTries = 0
         }
         numberOfTriesLabel.text = String(numberOfTries)
-        
-        self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
-        inputLabel.text = ""
+        self.image.image = UIImage(named: "\(self.wordsToCompare[self.level - 1].lowercased())-min.jpg")
         
         generatekeyboard()
         generateTexteUnderline()
@@ -84,10 +82,15 @@ class GameViewController: UIViewController
     //fonction win level
     func win()
     {
-        resultLabel.text = "win :), the image is \(wordsToCompare[level - 1])"
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1)
+        self.image.image = UIImage(named: "\(self.wordsToCompare[self.level - 1].lowercased()).jpg")
+        resultLabel.text = "You have win 🎉"
+        keyboardPosition = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3)
         {
-            self.inputLabel.text = ""
+            for label in self.labelArray
+            {
+                label.text = ""
+            }
             self.numberOfTries += 1
             self.numberOfTriesLabel.text = String(self.numberOfTries)
             self.level += 1
@@ -95,7 +98,7 @@ class GameViewController: UIViewController
             self.enterLetter.removeAll()
             self.generatekeyboard()
             self.generateTexteUnderline()
-            self.image.image = UIImage(named: "img-lvl0\(self.level).jpg")
+            self.image.image = UIImage(named: "\(self.wordsToCompare[self.level - 1].lowercased())-min.jpg")
             self.letterButtonLabel01.alpha = 1.0
             self.letterButtonLabel02.alpha = 1.0
             self.letterButtonLabel03.alpha = 1.0
@@ -121,10 +124,14 @@ class GameViewController: UIViewController
     //fonction loose level
     func loose()
     {
-        resultLabel.text = "loose :/"
+        resultLabel.text = "You lost 😕"
+        keyboardPosition = 0
         DispatchQueue.main.asyncAfter(deadline: .now() + 1)
         {
-            self.inputLabel.text = ""
+            for label in self.labelArray
+            {
+                label.text = ""
+            }
             self.numberOfTries += 1
             self.numberOfTriesLabel.text = String(self.numberOfTries)
             self.enterLetter.removeAll()
@@ -141,13 +148,18 @@ class GameViewController: UIViewController
             self.letterButtonLabel11.alpha = 1.0
             self.letterButtonLabel12.alpha = 1.0
             self.resultLabel.text = ""
-            
             guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
             let documentUrl = url.appendingPathComponent("game-data.json")
             let gameInfo = ["\(self.level)", "\(self.numberOfTries)"]
             guard let gameData = try? JSONEncoder().encode(gameInfo) else { fatalError() }
             try? gameData.write(to: documentUrl)
         }
+    }
+    
+    //end game
+    func endGame()
+    {
+        resultLabel.text = "Congrat, you are end the game"
     }
     
     //fonction check result trie
@@ -168,12 +180,19 @@ class GameViewController: UIViewController
     {
         if enterLetter.count < wordsToCompare[level - 1].count - 1
         {
-            inputLabel.text = inputLabel.text! + "  " + letter + "  "
+            labelArray[keyboardPosition].text = letter
             enterLetter.append(letter)
+            keyboardPosition += 1
+        }
+        else if enterLetter.count == wordsToCompare[level - 1].count - 1 && wordsToCompare.count == level
+        {
+            labelArray[keyboardPosition].text = letter
+            enterLetter.append(letter)
+            endGame()
         }
         else if enterLetter.count == wordsToCompare[level - 1].count - 1
         {
-            inputLabel.text = inputLabel.text! + "  " + letter + "  "
+            labelArray[keyboardPosition].text = letter
             enterLetter.append(letter)
             checkresult()
         }
@@ -182,18 +201,37 @@ class GameViewController: UIViewController
     //generate texte unbderline
     func generateTexteUnderline()
     {
+        for view in viewArray
+        {
+            view.removeFromSuperview()
+        }
+        for label in labelArray
+        {
+            label.removeFromSuperview()
+        }
+        labelArray.removeAll()
         let emptySpace = 10
         var xAxis = 0
         for _ in 1...wordsToCompare[level - 1].count
         {
-            let button = UIView()
-            button.frame = CGRect(x: xAxis, y: 0, width: 20, height: 3)
-            button.layer.cornerRadius = 2
+            let line = UIView()
+            line.frame = CGRect(x: xAxis, y: 0, width: 20, height: 3)
+            line.layer.cornerRadius = 2
+            line.backgroundColor = UIColor.orange
+            viewArray.append(line)
+            texteUnderlineContainer.addSubview(line)
+            
+            let labelLetter = UILabel(frame: CGRect(x: xAxis, y: 0, width: 20, height: 25))
+            labelArray.append(labelLetter)
+            labelLetter.textAlignment = .center
+            labelLetter.font = UIFont(name:"MarselisOffcPro-Bold", size: 20.0)
+            labelLetter.textColor = .white
+            texteContainer.addSubview(labelLetter)
+            
+            
             xAxis = xAxis + 20 + emptySpace
-            button.backgroundColor = UIColor.orange
-            texteUnderlineContainer.addSubview(button)
         }
-
+        labelContainerContraint.constant = CGFloat(xAxis - 10)
     }
     
     //fonction to generate the keyboard
