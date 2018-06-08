@@ -39,6 +39,7 @@ class ViewController: UIViewController
         super.viewDidLoad()
     }
     
+    //function to init the view
     func initView()
     {
         guard let url = self.manager.urls(for: .documentDirectory, in: .allDomainsMask).first else { fatalError() }
@@ -66,6 +67,7 @@ class ViewController: UIViewController
         image.image = UIImage(named: "\(wordsToCompare[level - 1].lowercased())-min.jpg")
     }
     
+    //play global game music
     func playSound() {
         guard let url = Bundle.main.url(forResource: "music", withExtension: "mp3") else { return }
         print(url)

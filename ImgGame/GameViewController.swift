@@ -79,7 +79,7 @@ class GameViewController: UIViewController
         generateTexteUnderline()
     }
     
-    //fonction win level
+    //function win level
     func win()
     {
         self.image.image = UIImage(named: "\(self.wordsToCompare[self.level - 1].lowercased()).jpg")
@@ -121,11 +121,25 @@ class GameViewController: UIViewController
         }
     }
     
-    //fonction loose level
+    //function shake error animation
+    func shakeAnimation(view: UIView)
+    {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 10, y: view.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 10, y: view.center.y))
+        
+        view.layer.add(animation, forKey: "position")
+    }
+    
+    //function loose level
     func loose()
     {
         resultLabel.text = "You lost 😕"
         keyboardPosition = 0
+        shakeAnimation(view: texteContainer)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1)
         {
             for label in self.labelArray
@@ -156,13 +170,13 @@ class GameViewController: UIViewController
         }
     }
     
-    //end game
+    //function when game is end
     func endGame()
     {
         resultLabel.text = "Congrat, you are end the game"
     }
     
-    //fonction check result trie
+    //function check result trie
     func checkresult()
     {
         if enterLetter.joined() == wordsToCompare[level-1]
@@ -175,7 +189,7 @@ class GameViewController: UIViewController
         }
     }
     
-    //fonction enter letter to input
+    //function enter letter to input
     func enterLetterToInput(letter: String)
     {
         if enterLetter.count < wordsToCompare[level - 1].count - 1
@@ -198,7 +212,7 @@ class GameViewController: UIViewController
         }
     }
     
-    //generate texte unbderline
+    //function to generate texte unbderline
     func generateTexteUnderline()
     {
         for view in viewArray
@@ -234,7 +248,7 @@ class GameViewController: UIViewController
         labelContainerContraint.constant = CGFloat(xAxis - 10)
     }
     
-    //fonction to generate the keyboard
+    //function to generate the keyboard
     func generatekeyboard()
     {
         keyboardLetter = Array(wordsToCompare[level - 1])
