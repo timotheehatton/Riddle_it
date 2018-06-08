@@ -20,6 +20,7 @@
 		3B6DBC7B20C58C8000EB7DCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DBC7A20C58C8000EB7DCC /* PopUpViewController.swift */; };
 		3B6DBC7F20C5985700EB7DCC /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DBC7E20C5985700EB7DCC /* FadeSegue.swift */; };
 		3B6E282620B6FCC30032E9E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E282520B6FCC30032E9E7 /* GameViewController.swift */; };
+		3BA4575220C9FDC100187BBD /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BA4575120C9FDC000187BBD /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3B6DBC7A20C58C8000EB7DCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		3B6DBC7E20C5985700EB7DCC /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
 		3B6E282520B6FCC30032E9E7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3BA4575120C9FDC000187BBD /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../../../music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		3B1D7AB120B308100007CA63 /* ImgGame */ = {
 			isa = PBXGroup;
 			children = (
+				3BA4574C20C9FCD600187BBD /* musics */,
 				3B1D7ACA20B334DF0007CA63 /* fonts */,
 				3B1D7AB220B308100007CA63 /* AppDelegate.swift */,
 				3B1D7AB420B308100007CA63 /* ViewController.swift */,
@@ -94,6 +97,14 @@
 				3B306EA820BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		3BA4574C20C9FCD600187BBD /* musics */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4575120C9FDC000187BBD /* music.mp3 */,
+			);
+			path = musics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 				3B1D7ABD20B308130007CA63 /* LaunchScreen.storyboard in Resources */,
 				3B1D7ABA20B308130007CA63 /* Assets.xcassets in Resources */,
 				3B1D7AB820B308100007CA63 /* Main.storyboard in Resources */,
+				3BA4575220C9FDC100187BBD /* music.mp3 in Resources */,
 				3B306EAB20BD78A000B5F1C3 /* MarselisOffcPro-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

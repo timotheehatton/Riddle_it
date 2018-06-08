@@ -132,6 +132,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-gj-haa">
                                 <rect key="frame" x="16" y="35" width="20" height="22"/>
                                 <state key="normal" image="sound"/>
+                                <connections>
+                                    <action selector="musicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2X-5m-EbA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12403905014418766" green="0.089053487703922241" blue="0.17191465736040612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -170,6 +173,7 @@
                     <connections>
                         <outlet property="image" destination="bNA-2H-DnB" id="bf7-y3-6OC"/>
                         <outlet property="levelLabel" destination="HZj-qr-JI4" id="KFl-ee-0g8"/>
+                        <outlet property="musicButtonInput" destination="SuG-gj-haa" id="vML-4r-Q1R"/>
                         <outlet property="numberOfTriesLabel" destination="aM9-zd-j4C" id="aYH-Iz-3eT"/>
                     </connections>
                 </viewController>
@@ -882,7 +886,7 @@
         <image name="sound" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="myG-pp-UxU"/>
+        <segue reference="cy9-K8-5dT"/>
         <segue reference="UdD-5d-ost"/>
     </inferredMetricsTieBreakers>
 </document>
